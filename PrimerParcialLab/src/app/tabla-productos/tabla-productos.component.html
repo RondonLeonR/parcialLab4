@@ -1,0 +1,11 @@
+<!--*ngIf="item.population > 40000000" Dentro del li, otra manera de limitar-->
+
+<ul class="list-group mb-3">
+    <div *ngFor="let item of this.listadoProd">
+        <li (click)="ProdSeleccionado(item)" class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+                <h6 class="my-0">{{item.codigo}} {{item.descripcion}} {{item.paisOrigen.name}}</h6>
+            </div>
+        </li>
+    </div>
+</ul>

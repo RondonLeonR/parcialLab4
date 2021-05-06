@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Actor Alta</title>
+
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <br>
+            <h1>Alta Actores</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted center">Paises</span>
+                </h4>
+                <app-listados-paises (paisSeleccionado)="paisElegido($event)"></app-listados-paises>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Datos del Actor</h4>
+                <form class="needs-validation" [formGroup]="forma" (ngSubmit)="enviar()">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="number" class="form-control" id="codigo" placeholder="Ingrese codigo"
+                                formControlName="codigo" [(ngModel)]="producto.codigo">
+                            <small class="invalid"
+                                *ngIf="forma.controls.codigo.errors?.required && forma.controls.codigo.touched">El
+                                Codigo es requerido</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="apellido" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Ingrese descripcion"
+                                formControlName="descripcion" [(ngModel)]="producto.descripcion">
+                            <small class="invalid"
+                                *ngIf="forma.controls.descripcion.errors?.required && forma.controls.descripcion.touched">La
+                                descripcion es requerida</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="edad" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="fechaDeNacimiento"
+                                placeholder="Ingrese Precio" formControlName="precio" [(ngModel)]="producto.precio">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="edad" class="form-label">Stock</label>
+                            <input type="number" class="form-control" id="fechaDeNacimiento" placeholder="Ingrese stock"
+                                formControlName="stock" [(ngModel)]="producto.stock">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="comestible" class="form-label">Comestible?</label>
+                            <select id="comestible" formControlName="comestible" [(ngModel)]="producto.comestible">
+                                <option value="" disabled selected>Seleccione opcion</option>
+                                <option value="true">Si</option>
+                                <option value="false">No</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pais">Pais Seleccionado</label>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <label for="pais" *ngIf="this.paisMostrar.name == 'nada'" class="text-muted">Seleccione
+                                Pais</label>
+                            <div *ngIf="this.paisMostrar.name != 'nada'">
+                                <h6 class="my-0">{{this.paisMostrar.name}}</h6>
+                                <small class="text-muted">{{this.paisMostrar.capital}}</small>
+                            </div>
+                            <span class="text-muted"><img style="width: 50px;"
+                                    src="{{this.paisMostrar.flag}}"></span>
+                            </li>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 d-grid gap-2">
+                            <button type="submit" class="btn btn-outline-success btn-block"
+                                [disabled]="this.forma.invalid">
+                                Aceptar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

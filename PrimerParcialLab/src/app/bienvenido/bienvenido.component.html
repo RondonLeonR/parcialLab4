@@ -1,0 +1,40 @@
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card">
+                <span class="border border-dark"></span>
+                <img [src]="gitPerfil.avatar_url" class="rounded-circle img-fluid" />
+                <div class="card-body">
+                    <h4 class="card-title">{{ gitPerfil.name }}</h4>
+                    <p class="card-text">{{ gitPerfil.bio }}</p>
+                    <a [href]="gitPerfil.html_url" target="_blank" class="btn btn-success btn-sm">Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 align-self-center">
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary mr-3">{{ gitPerfil.followers }} Followers</span>
+                    <span class="badge badge-success mr-3">{{ gitPerfil.public_repos }} Repos</span>
+                    <span class="badge badge-warning mr-3">{{ gitPerfil.public_gists }} Gists</span>
+                    <span class="badge badge-danger mr-3">{{ gitPerfil.following }} Following</span>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            User Name:
+                            <span class="font-weigh-bold">{{ gitPerfil.name }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            Location: {{ gitPerfil.location }}
+                        </li>
+                        <li class="list-group-item">Email: {{ gitPerfil.blog }}</li>
+                        <li class="list-group-item">
+                            Profile URL: {{ gitPerfil.html_url }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

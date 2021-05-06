@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "myapp-6555e": {
+      "hosting": {
+        "PrimerParcialLab": [
+          "myapp-6555e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "myapp-6555e"
+  }
+}

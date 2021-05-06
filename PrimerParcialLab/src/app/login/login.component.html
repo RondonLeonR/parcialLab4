@@ -1,0 +1,27 @@
+<body>
+
+
+    <main role="main">
+
+    </main>
+    <div class="container">
+        <br>
+        <br>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Login</h1>
+                <br>
+                <form>
+                    <input type="text" name="eemail" placeholder="E-mail" [(ngModel)]="userAux.email">
+                    <input type="password" name="password" placeholder="Password" [(ngModel)]="userAux.pass">
+                    <br>
+                    <button class="btn btn-outline-success" (click)="onLogin()">Login</button>
+                    <button class="btn-outline-danger" routerLink="/home">Cancel</button>
+                    <button class="btn-outline-warning" (click)="loginRapido(1)">Ingreso Empleado</button>
+                    <button class="btn-outline-warning" (click)="loginRapido(0)">Ingreso Admin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
