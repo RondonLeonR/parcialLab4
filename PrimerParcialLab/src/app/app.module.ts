@@ -14,6 +14,10 @@ import { ListadosPaisesComponent } from './listados-paises/listados-paises.compo
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { ProductoListadoComponent } from './producto-listado/producto-listado.component';
 import { TablaProductosComponent } from './tabla-productos/tabla-productos.component';
+import { PaisDetalleComponent } from './pais-detalle/pais-detalle.component';
+import { ABMcontainerComponent } from './abmcontainer/abmcontainer.component';
+import { ContainerListadoComponent } from './container-listado/container-listado.component';
+import { ContainerAltaComponent } from './container-alta/container-alta.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +27,13 @@ import { TablaProductosComponent } from './tabla-productos/tabla-productos.compo
     AltaProductosComponent,
     ListadosPaisesComponent,
     ProductoDetalleComponent,
-    
     ProductoListadoComponent,
-         TablaProductosComponent
+    TablaProductosComponent,
+    PaisDetalleComponent,
+    ABMcontainerComponent,
+    ContainerListadoComponent,
+    ContainerAltaComponent,
+
   ],
   imports: [
     BrowserModule,

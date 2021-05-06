@@ -15,7 +15,7 @@ export class TablaProductosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.listadoProd);
+    //console.log(this.listadoProd);
   }
 
   ProdSeleccionado(item){

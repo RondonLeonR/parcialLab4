@@ -11,10 +11,13 @@
         <a class="nav-link" routerLink="/login">Login</a>
       </li>
       <li *ngIf="this.token != null" class="nav-item">
-        <a class="nav-link" routerLink="/altaProductos">Alta Productos</a>
+        <a class="nav-link" routerLink="/producto/altaProductos">Alta Productos</a>
       </li>
       <li *ngIf="this.token != null" class="nav-item">
-        <a class="nav-link" routerLink="/detalleProd">Detalles Productos</a>
+        <a class="nav-link" routerLink="/producto/detalleProd">Detalles Productos</a>
+      </li>
+      <li *ngIf="this.loginAdmin()" class="nav-item">
+        <a class="nav-link" routerLink="/container">ABM Container</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

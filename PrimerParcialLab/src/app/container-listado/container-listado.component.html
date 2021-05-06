@@ -1,0 +1,19 @@
+<h1 class="display-3">Listado</h1>
+<table border=3 class="table table-striped">
+    <thead>
+        <th>Codigo</th>
+        <th>Marca</th>
+        <th>Capacidad</th>
+        <th>Borrar</th>
+        <th>Modificar</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listado" >
+            <td>{{item.codigo}}</td>
+            <td>{{item.marca}}</td>
+            <td>{{item.capacidad}}</td>
+            <td><button class="btn btn-outline-danger">Borrar</button></td>
+            <td><button class="btn btn-outline-warning">Modificar</button></td>
+        </tr>
+    </tbody>
+</table>

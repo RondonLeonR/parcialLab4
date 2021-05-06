@@ -17,7 +17,6 @@ export class ProductoListadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.listadoProds = this.service.getAll();
-    console.log(this.listadoProds);
   }
 
   prodElegido(prod:any){

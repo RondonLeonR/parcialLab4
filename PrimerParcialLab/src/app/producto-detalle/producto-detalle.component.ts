@@ -13,6 +13,7 @@ export class ProductoDetalleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.detalles);
   }
 
 

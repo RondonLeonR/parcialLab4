@@ -13,4 +13,13 @@ export class AppComponent {
     this.token = localStorage.getItem('token');
     console.log(this.token);
   }
+
+  loginAdmin(){
+    if(this.token == "admin@rapido.com"){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }

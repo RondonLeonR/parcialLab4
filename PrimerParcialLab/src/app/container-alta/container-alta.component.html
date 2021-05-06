@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Container Alta</title>
+
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <br>
+            <h1>Alta Container</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Datos del Actor</h4>
+                <form class="needs-validation" [formGroup]="forma" (ngSubmit)="enviar()">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="number" class="form-control" id="codigo" placeholder="Ingrese codigo"
+                                formControlName="codigo" [(ngModel)]="container.codigo">
+                        
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="apellido" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Ingrese marca"
+                                formControlName="marca" [(ngModel)]="container.marca">
+                            
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="edad" class="form-label">Capacidad</label>
+                            <input type="number" class="form-control" id="fechaDeNacimiento"
+                                placeholder="Ingrese Capacidad" formControlName="capacidad"
+                                [(ngModel)]="container.capacidad">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-grid gap-2">
+                            <button type="submit" class="btn btn-outline-success btn-block"
+                                [disabled]="this.forma.invalid">
+                                Aceptar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

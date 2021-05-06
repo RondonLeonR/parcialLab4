@@ -1,0 +1,38 @@
+<body>
+
+
+    <main role="main">
+
+    </main>
+    <div class="container">
+        <br>
+        <br>
+        <div class="jumbotron">
+            <div class="container">
+                <app-container-listado [listado]="this.listadoContainer"></app-container-listado>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="card-body">
+                    <app-container-alta (containerAgregado)="agregarContainer($event)"></app-container-alta>
+                    <!--<button class="btn btn-outline-success" routerLink="/containerAlta">Agregar Container</button>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                
+                <div class="card-body">
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+</body>

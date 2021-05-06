@@ -1,0 +1,13 @@
+<div *ngIf="!paisMostrar">
+    <p> Seleccione una Pelicula </p>
+</div>
+
+<div *ngIf="paisMostrar">
+    <div class="card bg-dark text-white" style="width:200px">
+        <img class="card-img-top" src="{{this.paisMostrar.flag}}" alt="" style="width:100%">
+        <h3 >Pais: {{this.paisMostrar.name}}</h3>
+        <h6 >Capital: {{this.paisMostrar.capital}}</h6>
+        <h6 >Poblacion: {{this.paisMostrar.population}}</h6>
+        <h6 >Idioma: {{this.paisMostrar.languages[0].name}}</h6>
+    </div>
+</div>
